@@ -1,5 +1,11 @@
-<h1>Update <%= @book.title %></h1>
-
+<h3>Update: <%= @book.title %>?</h3>
+<br>
+<% if !@book.authors.empty? %>
+  <% @book.authors.each do |author| %>
+    <h4>Author: <%= author.name %></h4>
+  <% end %>
+<% end %>
+<br>
 <form action="/books/<%= @book.id %>" method="post">
   <input name="_method" type="hidden" value="patch">
   <div class="form-group">
@@ -8,20 +14,24 @@
   </div>
 
   <div class="form-group">
-  <select name="book_author" class="form-control" required>
-    <option>Select this book's author</option>
-    <% @authors.each do |author| %>
-      <option value="<%= author.id %>"><%= author.name %></option>
-    <% end %>
-  </select>
+    <select name="book_author" class="form-control" required>
+      <option>Select this book's author</option>
+      <% @authors.each do |author| %>
+        <option value="<%= author.id %>"><%= author.name %></option>
+      <% end %>
+    </select>
   </div>
 
-  <button type="submit">Update</button>
+  <div class="form-group">
+    <button type="submit" class="btn btn-dark">Update</button>
+  </div>
 </form>
 
 <form action="/books/<%= @book.id %>" method="post">
   <input name="_method" type="hidden" value="delete" required>
-  <button type="submit">Delete book</button>
+  <div class="form-group">
+    <button type="submit" class="btn btn-dark">Delete book</button>
+  </div>
 </form>
 
 <p><a href="/books">Return to book list</a></p>

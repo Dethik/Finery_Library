@@ -2,14 +2,13 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'pry'
 require 'pg'
-require 'library_db'
+# require 'library_db'
 require './lib/book'
 require './lib/patron'
 require './lib/author'
 also_reload 'lib/**/*.rb'
 
-
-
+DB = PG.connect({:dbname => 'library'})
 
 get('/') do
   #Intro Welcome page with most recent 5 books
@@ -48,6 +47,7 @@ end
 patch('/books/:id') do
   @book = Book.find(params[:id].to_i)
   updates = params[:title]
+  @book.add_authors([params[:book_author].to_i])
   @book.update(updates)
   @books = Book.all
   erb(:books)

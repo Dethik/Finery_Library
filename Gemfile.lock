@@ -15,12 +15,14 @@ GEM
     diff-lcs (1.4.4)
     method_source (1.0.0)
     mini_mime (1.0.2)
+    mini_portile2 (2.5.0)
     multi_json (1.15.0)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
-    nokogiri (1.11.1-x64-mingw32)
+    nokogiri (1.11.1)
+      mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
-    pg (1.2.3-x64-mingw32)
+    pg (1.2.3)
     pry (0.14.0)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -62,7 +64,7 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
-  x64-mingw32
+  ruby
 
 DEPENDENCIES
   capybara
@@ -73,4 +75,4 @@ DEPENDENCIES
   sinatra-contrib
 
 BUNDLED WITH
-   2.2.3
+   1.17.2

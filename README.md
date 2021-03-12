@@ -4,6 +4,8 @@
 ## Description
 This is an application for learning databases with ruby while attending Epicodus coding school. This app Might be un finished and does not represent my class mates or my own coding knowledge.
 
+![Diagram Example](/public/img/schema.png)
+
 * * *
 
 ## Technologies used
@@ -13,25 +15,20 @@ This is an application for learning databases with ruby while attending Epicodus
 * Sinatra
 * Capybara
 * PostgreSQL
-
-* Ruby 2.6.5
-* Sinatra 2.1.0
 * Embedded Ruby (ERB)
-* PostgreSQL (psql) 12.6
-* pg 1.2.3
-* Bundler 1.17.2
-* RSpec 3.10
-* Capybara 3.34.0
-* Pry 0.14.0
+* pg
+* Bundler
+* Pry
 * HTML
-* Bootstrap 3.3.7
-* git 2.30.1
+* CSS
+* Bootstrap
+* git
 
 * * *
 
 ## Installation :
 
-* Go to (https://github.com/).
+* Go to (https://github.com/Dethik/Finery_Library).
 * Navigate to the code button on the github website.
 
 * Click on the code button to open the menu.
@@ -45,7 +42,7 @@ This is an application for learning databases with ruby while attending Epicodus
 
 - Once you have chosen your desired directory use the command.
 ```bash
-git clone https://github.com/
+git clone https://github.com/Dethik/Finery_Library
 ```
 
 <div
